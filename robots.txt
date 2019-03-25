@@ -1,1 +1,1 @@
-Sitemap: http://agre.ga/sitemap.xml
+Sitemap: http://arkeolog.github.io/sitemap.xml
