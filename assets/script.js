@@ -23,7 +23,14 @@ function addAssets() {
         document.head.append(styleTag);
     });
 
-    document.head.append("<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-73008944-4\"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-73008944-4');</script>");
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtag/js?id=UA-73008944-4";
+    document.head.append(gtm);
+
+    var gth = document.createElement("script");
+    gth.innerText="window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-73008944-4');";
+    document.head.append(gth);
 }
 
 var surl = encodeURI(location.href);
