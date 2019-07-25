@@ -31,6 +31,11 @@ function addAssets() {
     var gth = document.createElement("script");
     gth.innerText="window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-73008944-4');";
     document.head.append(gth);
+	
+	var ads = document.createElement("script");
+	ads.async = true;
+	ads.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+	document.head.appendChild(ads);
 }
 
 var surl = encodeURI(location.href);
@@ -44,4 +49,9 @@ window.onload=function() {
     document.body.innerHTML = before + content + after;
 
     addAssets();
+	
+	(adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-5748568287887760",
+          enable_page_level_ads: true
+     });
 }
